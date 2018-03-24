@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/plutus?createDatabaseIfNotExist=true
+    username: plutus
+    password: SET_IN_ENVIRONMENT
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      secret: 3ff207f73404b35b05b6b6d3657c9deb
+  flyway:
+    locations: classpath:db/migrations
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: true
+  profiles:
+    active: dev
+  jmx:
+    enabled: false
+
+management:
+  metrics:
+    export:
+      jmx:
+        enabled: false
